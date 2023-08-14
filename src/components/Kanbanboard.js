@@ -1,5 +1,5 @@
 import KbCard from "../components/Card";
-import { Flex, Stack, Heading, Text } from "@chakra-ui/react";
+import { Flex, Stack, Text } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
 import Icons from "./Icons";
 
