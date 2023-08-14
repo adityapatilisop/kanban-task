@@ -69,12 +69,13 @@ function App() {
                                     <MenuButton
                                           as={Button}
                                           leftIcon={<HamburgerIcon />}
-                                          w={100}
+                                          w={130}
                                           m={3}
                                           h={8}
                                           colorScheme="gray"
                                           variant="outline"
-                                          fontSize={12}
+                                          fontSize={15}
+                                          rightIcon={<ChevronDownIcon/>}
                                     >
                                           Display
                                     </MenuButton>

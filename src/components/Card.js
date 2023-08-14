@@ -1,5 +1,6 @@
 import { Card, CardBody, Stack, Text, Flex, Icon, Avatar, AvatarBadge } from "@chakra-ui/react";
-import { SettingsIcon } from "@chakra-ui/icons";
+import { SmallAddIcon } from "@chakra-ui/icons";
+import { Checkbox } from '@chakra-ui/react'
 
 export default function KbCard({ cardData, userData, avatar }) {
   const user = userData.find((user) => user.id === cardData.userId);
@@ -8,13 +9,15 @@ export default function KbCard({ cardData, userData, avatar }) {
     <Card
       direction={{ base: "column", sm: "row" }}
       overflow="hidden"
-      variant="outline"
+      bg="white"
       w="100%"
       mb={3}
+      boxShadow="0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06)"
+      borderRadius="md" // Rounded corners
     >
-      <CardBody p={2}>
-        <Stack spacing={1}>
-          <Flex justify={"space-between"} fontSize={{ base: "10px", sm: "12px" }} color="gray">
+      <CardBody p={4}>
+        <Stack spacing={2}>
+          <Flex justify={"space-between"} fontSize={{ base: "10px", sm: "12px" }} color="gray.600">
             <div>{cardData.id}</div>
             <div>
               {avatar ? (
@@ -30,24 +33,28 @@ export default function KbCard({ cardData, userData, avatar }) {
               )}
             </div>
           </Flex>
-          <Text fontSize={{ base: "13px", sm: "15px" }} align={"left"} fontWeight={"500"}>
+          <Checkbox>
+          <Text fontSize={{ base: "13px", sm: "15px" }} align={"left"} fontWeight={"500"} color="gray.700">
             {cardData.title}
           </Text>
+          </Checkbox> 
+          
           <Flex flexWrap="wrap" alignItems={"center"}>
-            <SettingsIcon
+            <SmallAddIcon
               border="1px"
-              borderColor="gray.200"
+              borderColor="gray.100"
               borderWidth={1}
               w={6}
               h={"22px"}
               p={"3px"}
-              borderRadius={3}
-            ></SettingsIcon>
+              borderRadius={4}
+              color="gray.400"
+            ></SmallAddIcon>
             {cardData.tag.map((item) => (
               <Flex
                 align={"left"}
                 border="1px"
-                borderColor="gray.200"
+                borderColor="white"
                 borderWidth={1}
                 borderRadius={5}
                 ml={2}
@@ -55,6 +62,7 @@ export default function KbCard({ cardData, userData, avatar }) {
                 alignItems={"center"}
                 h="22px"
                 alignSelf={"center"}
+                color="gray.600"
               >
                 <Icon
                   viewBox="0 0 200 200"
@@ -69,7 +77,7 @@ export default function KbCard({ cardData, userData, avatar }) {
                   />
                 </Icon>
                 <Flex>
-                  <Text fontSize={{ base: "12px", sm: "14px" }} color="gray.600">
+                  <Text fontSize={{ base: "12px", sm: "14px" }}>
                     {item}
                   </Text>
                 </Flex>
