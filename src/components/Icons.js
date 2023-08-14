@@ -1,15 +1,4 @@
-import {
-    TimeIcon,
-    RepeatClockIcon,
-    CheckCircleIcon,
-    CloseIcon,
-    CalendarIcon,
-    TriangleDownIcon,
-    WarningIcon,
-    ChevronUpIcon,
-    BellIcon,
-    MinusIcon,
-} from "@chakra-ui/icons";
+import { TimeIcon, RepeatClockIcon, CheckCircleIcon, CloseIcon, CalendarIcon, TriangleDownIcon, WarningIcon, ChevronUpIcon, BellIcon, MinusIcon, } from "@chakra-ui/icons";
 import { Avatar, AvatarBadge } from "@chakra-ui/react";
 export default function Icons({ groupKey, userData }) {
     const user = userData.find((user) => user.name === groupKey);

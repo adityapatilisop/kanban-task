@@ -1,41 +1,15 @@
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Image,
-    Stack,
-    Heading,
-    Button,
-    Text,
-    Flex,
-    Box,
-    Center,
-    Icon,
-    Avatar,
-    AvatarBadge,
-    AvatarGroup,
-} from "@chakra-ui/react";
+import { Card, CardBody, Stack, Text, Flex, Icon, Avatar, AvatarBadge, } from "@chakra-ui/react";
 import { SettingsIcon } from "@chakra-ui/icons";
 
 export default function KbCard({ cardData, userData, avatar }) {
     const user = userData.find((user) => user.id === cardData.userId);
 
     return (
-          <Card
-                direction={{ base: "column", sm: "row" }}
-                overflow="hidden"
-                variant="outline"
-                w={['88vw','350px']}
-          >
-                {/* <Stack> */}
+          <Card direction={{ base: "column", sm: "row" }} overflow="hidden" variant="outline" w={['88vw','350px']} >
+
                 <CardBody p={2}>
                       <Stack>
-                            <Flex
-                                  justify={"space-between"}
-                                  fontSize={12}
-                                  color="gray"
-                            >
+                            <Flex justify={"space-between"} fontSize={12} color="gray" >
                                   <div>{cardData.id}</div>
                                   <div>
                                         {avatar ? (
@@ -124,8 +98,6 @@ export default function KbCard({ cardData, userData, avatar }) {
                             </Flex>
                       </Stack>
                 </CardBody>
-
-                {/* </Stack> */}
           </Card>
     );
 }
