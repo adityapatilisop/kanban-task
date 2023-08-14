@@ -1,7 +1,8 @@
-import KanbanCard from "../components/KanbanCard";
-import IconSelector from "../components/IconSelector";
+import KbCard from "../components/Card";
+
 import { Flex, Stack, Heading, Text } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
+import Icons from "./Icons";
 const priorityLabels = {
       0: "No priority",
       1: "Low",
@@ -27,7 +28,7 @@ export default function Board({ sortedGroups, users, selectedGrouping }) {
                                           alignItems={"center"}
                                     >
                                           <Flex alignItems={"center"}>
-                                                <IconSelector
+                                                <Icons
                                                       groupKey={column}
                                                       userData={users}
                                                 />
@@ -65,7 +66,7 @@ export default function Board({ sortedGroups, users, selectedGrouping }) {
                                                       group.groupKey === column
                                           )
                                           ?.items.map((item) => (
-                                                <KanbanCard
+                                                <KbCard
                                                       key={item.id}
                                                       cardData={item}
                                                       userData={users}
@@ -86,7 +87,7 @@ export default function Board({ sortedGroups, users, selectedGrouping }) {
                                           alignItems={"center"}
                                     >
                                           <Flex alignItems={"center"}>
-                                                <IconSelector
+                                                <Icons
                                                       groupKey={groupKey}
                                                       userData={users}
                                                 />
@@ -105,7 +106,7 @@ export default function Board({ sortedGroups, users, selectedGrouping }) {
                                           <AddIcon w={3} />
                                     </Flex>
                                     {items.map((item) => (
-                                          <KanbanCard
+                                          <KbCard
                                                 key={item.id}
                                                 cardData={item}
                                                 userData={users}

@@ -11,7 +11,7 @@ import {
     MinusIcon,
 } from "@chakra-ui/icons";
 import { Avatar, AvatarBadge } from "@chakra-ui/react";
-export default function IconSelector({ groupKey, userData }) {
+export default function Icons({ groupKey, userData }) {
     const user = userData.find((user) => user.name === groupKey);
     if (groupKey === "In progress") return <TimeIcon w={3} mr={2} />;
     if (groupKey === "Backlog") return <RepeatClockIcon w={3} mr={2} />;

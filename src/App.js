@@ -12,7 +12,7 @@ import {
       Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
-import Board from "./containers/Board";
+import Board from "./components/Kanbanboard";
 function App() {
       const [tickets, setTickets] = useState([]);
       const [users, setUsers] = useState([]);
